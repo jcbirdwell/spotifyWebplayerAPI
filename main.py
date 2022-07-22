@@ -1,4 +1,4 @@
-import browser_cookie3
+import browser_cookie3  # only required if sp_dc token isn't manually provided
 import requests
 
 
