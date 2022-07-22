@@ -10,3 +10,9 @@ With this token, the three other non-standard endpoints get_friend_activity(), g
 their respective response data.
 Additionally, a standard api endpoint is used within the get_username() function. This function is used to obtain the username associated with 
 the access token for use within the previous follower related functions. 
+
+USAGE: The primary hurdle for using these functions will most likely be obtaining the access token. Getting this access token requires the 
+user to have logged into the Spotify web player prior to use. The get_web_access_token() function's request requires the "sp_dc" token that 
+is stored as a browser cookie upon login to the web player. The token retrieval has been automated using the browser_cookie3 library, but can
+also be manually retrieved from the browser via F12 -> Application -> Storage -> Cookies -> https://open.spotify.com -> the value for "sp_dc".
+This token can be provided to the function as an optional parameter thus bypassing the browser_cookie3 dependancy and its access requests etc. 
